@@ -1,0 +1,31 @@
+.products-category {
+    position: sticky;
+    top: 82px;
+    list-style-type: none;
+
+    &-link {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: #BDA87A;
+        border-top: 1px solid #BDA87A;
+        border-right: 1px solid #BDA87A;
+        border-left: 1px solid #BDA87A;
+        padding: 6px 0 6px 0;
+        transition: all 0.4s ease;
+
+        &:hover {
+            background: #BDA87A;
+            color: #ffff;
+        }
+    }
+
+    &-link-bottom {
+        border-bottom: 1px solid #BDA87A;
+    }
+}
+
+.backgroundSuccess {
+    background: #BDA87A;
+    color: #ffff;
+}

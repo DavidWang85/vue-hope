@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/functions"; // 載入function
+@import "./helpers/variables"; // 載入變數
+@import "~bootstrap/scss/bootstrap"; // 匯入bootstrap
+@import "./styles/main"; //自己寫的變數
+// @import "./styles/rwd"; // RWD
+@import "./styles/frontcart.scss"; //購物車
+@import "./styles/frontproduct.scss"; //單一產品頁面
+@import "./styles/frontproducts.scss"; // 產品列表
+@import "./styles/clicktotop.scss"; // 回到最上方
+@import "./styles/fronthome.scss"; // 首頁

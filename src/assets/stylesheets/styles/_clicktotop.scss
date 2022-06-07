@@ -1,0 +1,14 @@
+.to-top {
+    cursor: pointer;
+    display: block;
+    outline: none;
+    color: #BDA87A;
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    transition: all 0.4s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

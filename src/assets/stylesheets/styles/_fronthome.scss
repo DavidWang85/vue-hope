@@ -1,0 +1,53 @@
+.fullbanner {
+    height: 100vh;
+    z-index: -1;
+
+    &-img {
+        // filter: brightness(80%);
+        width: 100%;
+        max-height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
+        &-community {
+            background-image: url("https://images.unsplash.com/photo-1505843795480-5cfb3c03f6ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2066&q=80");
+        }
+
+        &-mansion {
+            background-image: url("https://images.unsplash.com/photo-1505843513577-22bb7d21e455?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80");
+        }
+
+        &-park {
+            background-image: url("https://images.unsplash.com/photo-1610295186968-7ad29a75199e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80");
+        }
+    }
+}
+
+.front-title {
+    font-size: 48px;
+    background: rgba(255, 255, 255, 0.546);
+    padding: 12px;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+}
+
+.idea-bg {
+    height: 300px;
+    width: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.idea-bg-space {
+    background-image: url('https://media.istockphoto.com/photos/excited-senior-africanamerican-woman-with-friends-outdoors-picture-id1332740608?k=20&m=1332740608&s=612x612&w=0&h=R5PfnIe5LFTpbAOlOTe3XVv_1Y_xDZoc-NNqL2o8gak=');
+}
+
+.idea-bg-takecare {
+    background-image: url('https://media.istockphoto.com/photos/getting-outside-was-a-lovely-suggestion-picture-id1165981605?k=20&m=1165981605&s=612x612&w=0&h=C4JVyl9ehT53E7q5sXC5jm1tYnwYtwx1aJ4Qn3yNIPg=');
+}
