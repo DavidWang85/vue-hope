@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div v-show="top" class="to-top" @click="scroll">
+    <div v-show="top" class="to-top top-icon" @click="scroll">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="50"
-        height="50"
+        width="44"
+        height="44"
         fill="currentColor"
         class="bi bi-arrow-up-circle-fill"
         viewBox="0 0 16 16"
@@ -20,6 +20,12 @@
 <script>
 import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill();
+
+window.addEventListener("scroll", function () {
+  const top = document.querySelector(".top-icon");
+  top.classList.toggle("to-top", window.scrollY > 60);
+});
+
 export default {
   data() {
     return {
@@ -33,16 +39,16 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener("scroll", () => {
-      // 滚动事件
-      let html = document.documentElement;
-      if (html.scrollTop >= 100) {
-        //当滚动高度大于等于100返回顶部出现
-        this.top = true;
-      } else {
-        this.top = false;
-      }
-    });
+    // window.addEventListener("scroll", () => {
+    //   // 滚动事件
+    //   let html = document.documentElement;
+    //   if (html.scrollTop >= 100) {
+    //     //当滚动高度大于等于100返回顶部出现
+    //     this.top = true;
+    //   } else {
+    //     this.top = false;
+    //   }
+    // });
   },
 };
 </script>

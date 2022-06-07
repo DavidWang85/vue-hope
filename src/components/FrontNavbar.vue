@@ -54,7 +54,7 @@
 import emitter from "@/methods/emitter";
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
-  header.classList.toggle("menu-scroll", window.scrollY > 110);
+  header.classList.toggle("menu-scroll", window.scrollY > 60);
 });
 export default {
   data() {
