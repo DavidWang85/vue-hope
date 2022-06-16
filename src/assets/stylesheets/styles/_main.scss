@@ -88,7 +88,10 @@
     color: #ffff;
     transform: translate(-50%, -50%);
 }
-
+//ul reset
+.uli-reset{
+    list-style: none;
+}
 // position
 .relative {
     position: relative;
@@ -97,3 +100,10 @@
 .absolute {
     position: absolute;
 }
+//navbar
+// .nav-link{
+//     transition: all 0.6s ease-out;
+//     &:hover{
+//         border-bottom: 1px solid #fff;
+//     }
+// }

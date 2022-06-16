@@ -24,16 +24,18 @@
         }
     }
 }
-
 .front-title {
     font-size: 48px;
-    background: rgba(255, 255, 255, 0.546);
-    padding: 12px;
+    background: rgba(0, 0, 0, 0.584);
+    padding: 12px 40px 12px 40px;
     z-index: 20;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #000;
+    color: #ffff;
+    .front-title-subtitle{
+        font-size: 24px;
+    }
 }
 
 .idea-bg {
@@ -50,4 +52,20 @@
 
 .idea-bg-takecare {
     background-image: url('https://media.istockphoto.com/photos/getting-outside-was-a-lovely-suggestion-picture-id1165981605?k=20&m=1165981605&s=612x612&w=0&h=C4JVyl9ehT53E7q5sXC5jm1tYnwYtwx1aJ4Qn3yNIPg=');
+}
+.pic{
+    .pic-link-img{
+        width: 100%;
+        max-height: 360px;
+        overflow: hidden;
+    }
+}
+.pic-link .pic-link-img img{
+    transform: scale(1, 1);
+    transition: all 1s ease-out;
+
+}
+.pic-link:hover .pic-link-img img{
+    transform: scale(1.2, 1.2);
+    filter: brightness(0.9);
 }

@@ -4,7 +4,7 @@
   <ClickToTop></ClickToTop>
   <div id="fb-root"></div>
   <!-- Your 洽談外掛程式 code -->
-  <div v-show="top" id="fb-customer-chat" class="fb-customerchat"></div>
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
   <FrontFooter></FrontFooter>
 </template>
 
@@ -14,11 +14,6 @@ import FrontFooter from "@/components/FrontFooter.vue";
 import ClickToTop from "@/components/ClickToTop.vue";
 
 export default {
-  data() {
-    return {
-      top: false,
-    };
-  },
   methods: {
     init() {
       window.fbAsyncInit = function () {
@@ -46,18 +41,10 @@ export default {
   },
   mounted() {
     // 要用網頁時再開啟
-    const chatbox = document.getElementById("fb-customer-chat");
-    chatbox.setAttribute("page_id", `${process.env.VUE_APP_FB_ID}`);
-    chatbox.setAttribute("attribution", "biz_inbox");
-    this.init();
-    window.addEventListener("scroll", function () {
-      let html = document.documentElement;
-      if (html.scrollTop > 60) {
-        this.top = true;
-      } else {
-        this.top = false;
-      }
-    });
+    // const chatbox = document.getElementById("fb-customer-chat");
+    // chatbox.setAttribute("page_id", `${process.env.VUE_APP_FB_ID}`);
+    // chatbox.setAttribute("attribution", "biz_inbox");
+    // this.init();
   },
 };
 </script>

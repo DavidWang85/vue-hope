@@ -20,23 +20,25 @@
         </router-link>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link class="nav-link ps-0" to="/products"
+            <router-link
+              class="nav-link hvr-underline-from-center"
+              to="/products"
               >服務總覽</router-link
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link ps-0" to="/articles"
-              >文章專欄</router-link
+            <router-link class="nav-link hvr-underline-from-center" to="/about"
+              >關於我們</router-link
             >
           </li>
         </ul>
       </div>
       <div class="d-flex align-items-center">
         <router-link class="me-4 align-text-bottom text-light" to="/collect">
-          <i class="bi bi-chat-square-heart"></i>
+          <i class="bi bi-chat-square-heart hvr-grow-shadow"></i>
         </router-link>
         <router-link class="position-relative text-light" to="/cart">
-          <i class="bi bi-bag"
+          <i class="bi bi-bag hvr-grow-shadow"
             ><span
               class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
             >
@@ -83,6 +85,7 @@ export default {
 </script>
 
 <style scoped>
+@import "hover.css/css/hover.css";
 .header.menu-scroll {
   background: #663224 !important;
 }

@@ -10,6 +10,10 @@ const routes = [
         component: () => import("../views/Front/HomeView.vue"),
       },
       {
+        path: "about",
+        component: () => import("../views/Front/AboutView.vue"),
+      },
+      {
         path: "products",
         component: () => import("../views/Front/ProductsView.vue"),
       },
@@ -35,11 +39,30 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/admin",
+    component: () => import("../views/Admin/DashboardView.vue"),
+    children: [
+      {
+        path: "products",
+        component: () => import("../views/Admin/AdminProducts.vue"),
+      },
+    ],
+  },
+  {
+    path: "/login",
+    component: () => import("../views/LoginView.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    component: () => import("../views/NotFound.vue"),
+  },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  linkActiveClass: "active",
 });
 
 router.afterEach(() => {

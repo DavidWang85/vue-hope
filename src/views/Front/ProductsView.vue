@@ -26,61 +26,55 @@
   </div>
   <div class="container page-top">
     <div class="mt-4">
-      <div class="row">
+      <div class="row d-flex justify-content-between">
         <div class="col-3">
           <ul class="products-category">
             <li>
-              <a
+              <router-link
+                to="/products"
                 class="products-category-link"
                 :class="{ backgroundSuccess: categoryActive === 'all' }"
-                href="#"
-                @click.prevent="getProducts('')"
-                >全部服務</a
+                >全部服務</router-link
               >
             </li>
             <li>
-              <a
-                class="products-category-link"
+              <router-link
+                :to="{ path: '/products', query: { category: '家訪' } }"
                 :class="{ backgroundSuccess: categoryActive === '家訪' }"
-                href="#"
-                @click.prevent="getProducts('', '家訪')"
-                >家訪</a
+                class="products-category-link"
+                >家訪</router-link
               >
             </li>
             <li>
-              <a
-                class="products-category-link"
+              <router-link
+                :to="{ path: '/products', query: { category: '視訊' } }"
                 :class="{ backgroundSuccess: categoryActive === '視訊' }"
-                href="#"
-                @click.prevent="getProducts('', '視訊')"
-                >視訊</a
+                class="products-category-link"
+                >視訊</router-link
               >
             </li>
             <li>
-              <a
-                class="products-category-link"
+              <router-link
+                :to="{ path: '/products', query: { category: '日照' } }"
                 :class="{ backgroundSuccess: categoryActive === '日照' }"
-                href="#"
-                @click.prevent="getProducts('', '日照')"
-                >日照</a
-              >
-            </li>
-            <li>
-              <a
                 class="products-category-link"
-                :class="{ backgroundSuccess: categoryActive === '護理房型' }"
-                href="#"
-                @click.prevent="getProducts('', '護理房型')"
-                >護理房型</a
+                >日照</router-link
               >
             </li>
             <li>
-              <a
+              <router-link
+                :to="{ path: '/products', query: { category: '護理房型' } }"
+                :class="{ backgroundSuccess: categoryActive === '護理房型' }"
+                class="products-category-link"
+                >護理房型</router-link
+              >
+            </li>
+            <li>
+              <router-link
                 class="products-category-link products-category-link-bottom"
+                :to="{ path: '/products', query: { category: '一般房型' } }"
                 :class="{ backgroundSuccess: categoryActive === '一般房型' }"
-                href="#"
-                @click.prevent="getProducts('', '一般房型')"
-                >一般房型</a
+                >一般房型</router-link
               >
             </li>
           </ul>
@@ -89,7 +83,7 @@
           <div class="row row-cols-1 row-cols-md-2">
             <div class="col" v-for="product in products" :key="product.id">
               <div
-                class="card shadow border-light border-0 mb-4 position-relative position-relative"
+                class="card rounded shadow border-light border-0 mb-4 position-relative position-relative"
               >
                 <router-link
                   class="card-link text-dark text-decoration-none"
@@ -103,7 +97,7 @@
                         background-size: cover;
                         background-position: center center;
                       "
-                      class="rounded-3 card-zoom-img"
+                      class="card-zoom-img rounded-top"
                     ></div>
                     <div class="card-zoom-text fs-4 border border-light p-2">
                       查看更多
@@ -188,13 +182,29 @@ export default {
       categoryActive: "",
     };
   },
+  watch: {
+    collect: {
+      handler() {
+        // 1.自訂欄位 ('欄位名稱', 存入的JSON內容)
+        // 2.但localStorage只能用字串形式， 所以使用stringify方法轉成字串
+        // 3.當資料有變動的時候做寫入，沒有的話就不做
+        localStorage.setItem("collect", JSON.stringify(this.collect));
+      },
+      deep: true,
+    },
+    $route() {
+      this.getProducts();
+    },
+  },
   mixins: [alert],
   methods: {
-    getProducts(page = 1, category) {
+    getProducts(page = 1) {
       this.isLoading = true;
-      let url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/?page=${page}`;
+      console.log(this.$route.query);
+      const { category } = this.$route.query;
+      let url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products?page=${page}`;
       if (category) {
-        url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/?category=${category}`;
+        url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products?page=${page}&category=${category}`;
         this.categoryActive = category;
       } else {
         this.categoryActive = "all";
@@ -236,17 +246,6 @@ export default {
         this.collect.splice(collectIndex, 1);
         this.alertRemoveCollect(name);
       }
-    },
-  },
-  watch: {
-    collect: {
-      handler() {
-        // 1.自訂欄位 ('欄位名稱', 存入的JSON內容)
-        // 2.但localStorage只能用字串形式， 所以使用stringify方法轉成字串
-        // 3.當資料有變動的時候做寫入，沒有的話就不做
-        localStorage.setItem("collect", JSON.stringify(this.collect));
-      },
-      deep: true,
     },
   },
   mounted() {

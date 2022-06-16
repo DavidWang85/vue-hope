@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="top" class="to-top top-icon" @click="scroll">
+    <div v-show="top" class="to-top top-icon hvr-pulse" @click="scroll">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="44"
