@@ -42,14 +42,14 @@
   <div class="container">
     <div class="mt-4 mb-3">
       <div class="d-flex justify-content-center align-items-center">
-        <div class="col-6 p-3">
+        <div class="col-6">
           <img
             class="w-100 shadow rounded"
             src="https://images.unsplash.com/photo-1621106036911-964146b9f97c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
             alt=""
           />
         </div>
-        <div class="col-6 p-3">
+        <div class="col-6 ps-4">
           <h5 class="fw-bold">注意須知</h5>
           <ol class="mt-4">
             <li class="mt-1">訂單完成後五日會有專人進行行前通知。</li>

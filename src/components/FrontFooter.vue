@@ -5,9 +5,9 @@
         class="d-flex flex-column align-items-center justify-content-between text-white py-4"
       >
         <div class="user-content d-flex align-items-center mb-0">
-          <p class="border-end pe-2 me-2">耆望 © 2022 COPYRIGHT</p>
+          <p class="border-end pe-2 me-2">© 耆望.2022 COPYRIGHT</p>
           <p>
-            <router-link to="/admin" class="text-white"
+            <router-link to="/admin/products" class="text-white"
               ><i class="bi bi-person-circle"></i
             ></router-link>
           </p>

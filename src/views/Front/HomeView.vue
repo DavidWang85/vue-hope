@@ -35,7 +35,7 @@
       >
         <h3 class="fw-bold text-success">在這裡 我們打造無障礙的空間</h3>
         <h5
-          class="font-weight-normal text-muted mt-2 text-sm-start text-md-end"
+          class="font-weight-normal text-muted mt-2 text-sm-start text-md-end red"
         >
           透過長照空間社區化
           <br />

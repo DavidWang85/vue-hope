@@ -38,7 +38,7 @@
         <div
           class="frontcart-progress-title d-flex justify-content-center align-items-center"
         >
-          <h3 class="frontcart-progress-title-fir">社區歷史</h3>
+          <h3 class="frontcart-progress-title-fir mt-5 bg-light">社區歷史</h3>
         </div>
       </div>
       <div class="mt-5 pb-5">

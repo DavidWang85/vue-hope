@@ -116,5 +116,61 @@ export default {
         icon: "info",
       });
     },
+    // 登入成功
+    alertLoginSuccess() {
+      Swal.fire({
+        toast: true, //啟用吐司框
+        title: `登入成功，歡迎回來`,
+        position: "top-end", //位置
+        timer: 2000, //倒數計時
+        showConfirmButton: false,
+        icon: "success",
+      });
+    },
+    // 登入失敗
+    alertLoginFalse() {
+      Swal.fire({
+        toast: true, //啟用吐司框
+        title: `帳號/密碼 沒有填寫<br>或者輸入錯誤喔～<br>請重新登入`,
+        position: "top-end", //位置
+        timer: 5000, //倒數計時
+        showConfirmButton: false,
+        icon: "error",
+      });
+    },
+    // 登出成功
+    alertLogoutSuccess() {
+      Swal.fire({
+        toast: true, //啟用吐司框
+        title: `登出成功！`,
+        position: "top-end", //位置
+        timer: 2000, //倒數計時
+        showConfirmButton: false,
+        icon: "success",
+      });
+    },
+    // 新增產品成功
+    alertAddProduct(name) {
+      Swal.fire({
+        toast: true, //啟用吐司框
+        title: `後台產品 ${name} <br>更新<br>或者上傳成功`,
+        position: "top-end", //位置
+        timer: 2000, //倒數計時
+        showConfirmButton: false,
+        icon: "success",
+      });
+    },
+    // 移除產品
+    alertRemoveProduct(name) {
+      Swal.fire({
+        toast: true, //啟用吐司框
+        title: `後台商品 ${name} 以刪除`,
+        position: "top-end", //位置
+        timer: 1500, //倒數計時
+        showConfirmButton: false,
+        // color: "#663224",
+        icon: "info",
+      });
+    },
   },
 };

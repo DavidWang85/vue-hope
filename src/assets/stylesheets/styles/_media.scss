@@ -1,0 +1,14 @@
+$pd: 992px;
+$mb: 576px;
+
+@mixin pd {
+    @media only screen and (max-width: $pd) {
+        @content;
+    }
+}
+
+@mixin mb {
+    @media only screen and (max-width: $mb) {
+        @content;
+    }
+}

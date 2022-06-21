@@ -17,11 +17,11 @@
   </div>
   <div class="container pages-top">
     <div class="row d-flex pb-4 align-items-center">
-      <div class="col-6">
+      <div class="col-lg-6 col-12">
         <img class="img-cover w-100" :src="product.imageUrl" alt="" />
       </div>
-      <div class="col-6">
-        <h3 class="mb-4 fs-1 text-primary p-0">
+      <div class="col-lg-6 col-12">
+        <h3 class="mb-4 fs-1 text-primary p-0 pt-4 pt-lg-0">
           {{ product.title
           }}<span v-if="collect.includes(product.id)"
             ><i class="bi bi-chat-square-heart-fill text-danger ms-3"></i
@@ -36,9 +36,9 @@
             NT$ {{ product.origin_price }}
           </p>
         </div>
-        <p class="mb-4 col-6">{{ product.description }}</p>
+        <p class="mb-4 col-12">{{ product.description }}</p>
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-12 col-lg-6">
             <div class="input-group">
               <select id="" class="form-select" v-model="product.qty">
                 <option
@@ -55,7 +55,9 @@
               }}</span>
             </div>
           </div>
-          <div class="col-6">
+          <div
+            class="col-md-12 col-lg-6 mt-4 mt-lg-0 d-flex justify-content-between"
+          >
             <button
               @click="addToCart(product.id, product.title, product.qty)"
               class="btn btn-primary px-lg-4 me-2"
@@ -83,7 +85,7 @@
     </div>
     <div class="row mt-5">
       <div class="mb-4">
-        <div class="front-product-title">
+        <div class="front-product-title mb-4">
           <h4 class="text-center fw-bold border-bottom border-primary">
             服務介紹
           </h4>
@@ -95,16 +97,18 @@
         </div>
       </div>
       <div class="mb-4">
-        <div class="front-product-title">
+        <div class="front-product-title mb-4">
           <h4 class="text-center fw-bold border-bottom border-primary">
             注意須知
           </h4>
         </div>
         <ul class="mb-4">
-          <li>ajdinf</li>
-          <li>asdjifa</li>
-          <li>ajsifa</li>
-          <li>asfjiaf</li>
+          <li>
+            以月計費服務將會持續扣款，當月停止扣款後將會在下個月份停止服務。
+          </li>
+          <li>如有選購視訊服務請自備電腦相關設備，並保持網路在穩定狀態。</li>
+          <li>如有更多服務需求，將會酌量收取費用。</li>
+          <li>耆望社區對各類服務有最終解釋權。</li>
         </ul>
       </div>
       <div class="mb-4">
@@ -120,7 +124,12 @@
               v-for="(img, index) in product.imagesUrl"
               :key="index"
             >
-              <img :src="img" class="img-fluid mt-4 d-block" alt="" />
+              <img
+                :src="img"
+                class="img-fluid mt-4 d-block"
+                alt=""
+                style="height: 200px"
+              />
             </div>
           </div>
         </div>

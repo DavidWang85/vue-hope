@@ -33,9 +33,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffff;
+    @include pd {
+            font-size: 36px;
+    }
     .front-title-subtitle{
         font-size: 24px;
+        @include pd{
+            font-size: 16px;
+        }
     }
+    
 }
 
 .idea-bg {
