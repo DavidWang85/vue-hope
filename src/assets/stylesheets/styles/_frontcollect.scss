@@ -1,0 +1,9 @@
+.collect-img{
+    height: 100px;
+    @include pd {
+        height: 80px;
+    }
+    @include mb {
+        height: 40px;
+    }
+}

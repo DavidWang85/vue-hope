@@ -30,9 +30,7 @@
             >
           </li>
           <li class="nav-item">
-            <router-link to="/admin/products" class="nav-link"
-              >訂單</router-link
-            >
+            <router-link to="/admin/orders" class="nav-link">訂單</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/" class="nav-link">回到前台</router-link>

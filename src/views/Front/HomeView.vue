@@ -2,9 +2,12 @@
   <div class="front-banner relative">
     <div class="absolute front-title text-center rounded">
       <p class="title-head">創造最美長照社區</p>
-      <p class="title-head front-title-subtitle">
-        期許在這裡 你我都找到新的希望
-      </p>
+      <p class="front-title-subtitle">期許在這裡 你我都找到新的希望</p>
+      <router-link
+        class="btn btn-sm-lg btn-secondary animate__animated animate__bounce animate__infinite animate__slow"
+        to="/products"
+        >查看服務</router-link
+      >
     </div>
     <Swiper
       :effect="'fade'"
@@ -26,7 +29,9 @@
   </div>
   <div class="container py-7">
     <h2 class="text-primary text-center text-stress fw-bold">核心理念</h2>
-    <div class="row flex-md-row-reverse flex-column mt-5">
+    <div
+      class="row flex-md-row-reverse flex-column mt-5 animate__animated animate__fadeInLeft"
+    >
       <div class="col-md-6">
         <div class="img-fluid rounded idea-bg idea-bg-space"></div>
       </div>
@@ -43,7 +48,9 @@
         </h5>
       </div>
     </div>
-    <div class="row flex-md-row flex-column mt-5">
+    <div
+      class="row flex-md-row flex-column mt-5 animate__animated animate__fadeInRight"
+    >
       <div class="col-md-6">
         <div class="img-fluid rounded idea-bg idea-bg-takecare"></div>
       </div>
@@ -59,6 +66,22 @@
       </div>
     </div>
   </div>
+  <div class="bg-light">
+    <div class="container py-7 toabout">
+      <div class="row justify-content-center">
+        <div class="col-md-4 text-center py-7 toabout-content">
+          <p class="h5 text-dark">不再讓年紀成為你熱情生活的阻力</p>
+          <router-link
+            type="button"
+            class="btn btn-outline-primary mt-3"
+            to="/about"
+            >關於我們</router-link
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 舊的 -->
   <div class="bg-light">
     <div class="container py-7">
       <div class="row justify-content-center">
@@ -179,7 +202,7 @@
                   <h2 class="text mt-3">其他服務</h2>
                   <div class="card-body" style="height: 80px">
                     <p class="card-text">
-                      打破傳統長照中心思維，提供更多元的照護服務
+                      打破傳統長照中心思維，提供多元的照護服務
                     </p>
                   </div>
                 </router-link>
@@ -190,46 +213,47 @@
       </div>
     </div>
   </div>
-  <div class="bg-secondary"></div>
-  <div class="container pt-7">
-    <div class="row justify-content-center">
-      <div class="col-md-4 text-center">
-        <h2 class="text-primary text-stress fw-bold">獲取優惠折扣</h2>
-        <div class="input-group my-3 d-flex justify-content-center">
-          <v-form ref="form" v-slot="{ errors }">
-            <div class="mb-3">
-              <label for="email" class="form-label fw-bold"
-                >註冊信箱獲得折扣碼吧！</label
-              >
-              <v-field
+  <div class="py-7 discount">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 text-center discount-content">
+          <h2 class="text-primary text-stress fw-bold">獲取優惠折扣</h2>
+          <div class="input-group my-3 d-flex justify-content-center">
+            <v-form ref="form" v-slot="{ errors }">
+              <div class="mb-3">
+                <label for="email" class="form-label fw-bold text-primary"
+                  >註冊信箱獲得折扣碼吧！</label
+                >
+                <v-field
+                  v-if="!this.coupon"
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  :class="{ 'is-invalid': errors['email'] }"
+                  placeholder="請輸入電子郵件"
+                  rules="required|email"
+                  v-model="this.mail"
+                ></v-field>
+                <error-message
+                  name="email"
+                  class="invalid-feedback"
+                ></error-message>
+              </div>
+              <div class="text-success h3" v-show="this.coupon">
+                優惠折扣碼： {{ this.coupon }}
+              </div>
+              <button
                 v-if="!this.coupon"
-                id="email"
-                name="email"
-                type="email"
-                class="form-control"
-                :class="{ 'is-invalid': errors['email'] }"
-                placeholder="請輸入電子郵件"
-                rules="required|email"
-                v-model="this.mail"
-              ></v-field>
-              <error-message
-                name="email"
-                class="invalid-feedback"
-              ></error-message>
-            </div>
-            <div class="text-success h3" v-show="this.coupon">
-              優惠折扣碼： {{ this.coupon }}
-            </div>
-            <button
-              v-if="!this.coupon"
-              type="submit"
-              class="btn btn-primary"
-              :class="{ disabled: Object.keys(errors).length > 0 }"
-              @click.prevent="getCoupon"
-            >
-              送出
-            </button>
-          </v-form>
+                type="submit"
+                class="btn btn-primary"
+                :class="{ disabled: Object.keys(errors).length > 0 }"
+                @click.prevent="getCoupon"
+              >
+                送出
+              </button>
+            </v-form>
+          </div>
         </div>
       </div>
     </div>
@@ -243,6 +267,8 @@ import { EffectFade, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
+import "animate.css";
+
 export default {
   data() {
     return {

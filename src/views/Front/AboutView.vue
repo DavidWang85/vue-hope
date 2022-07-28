@@ -23,22 +23,28 @@
         <h3 class="frontcart-progress-title-fir">社區初衷</h3>
       </div>
     </div>
-    <div class="mt-5">
-      <p>
-        創辦人有鑒於台灣老年人口不斷增長，許多長輩在晚年生活因為生活圈縮小只能待在家中，或者因為行動不動失去享受生活的權利。在民國100年建立耆望社區，希望透過打造一個無障礙、樂齡的社區，讓長輩們擁有快樂的退休人生。
-      </p>
-      <p>
-        耆望社區擁有全台最多樣化的環境與設施，更擁有全區免費接駁車，讓家中長輩每天都能探索與享受，不再受限於老化帶來的不便，我們希望透過改變長照環境來改善台灣因著高齡化所帶來的家庭與社會問題。
-      </p>
+    <div class="frontcart-progress-content mt-5">
+      <img
+        src="https://images.unsplash.com/photo-1641135309825-4d703d0225a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        alt=""
+      />
+      <div class="">
+        <p>
+          創辦人有鑒於台灣老年人口不斷增長，許多長輩在晚年生活因為生活圈縮小只能待在家中，或者因為行動不動失去享受生活的權利。在民國100年建立耆望社區，希望透過打造一個無障礙、樂齡的社區，讓長輩們擁有快樂的退休人生。
+        </p>
+        <p>
+          耆望社區擁有全台最多樣化的環境與設施，更擁有全區免費接駁車，讓家中長輩每天都能探索與享受，不再受限於老化帶來的不便，我們希望透過改變長照環境來改善台灣因著高齡化所帶來的家庭與社會問題。
+        </p>
+      </div>
     </div>
   </div>
-  <div class="history">
+  <div class="history bg-light">
     <div class="frontcart-progress-list container">
       <div class="mt-5">
         <div
           class="frontcart-progress-title d-flex justify-content-center align-items-center"
         >
-          <h3 class="frontcart-progress-title-fir mt-5 bg-light">社區歷史</h3>
+          <h3 class="frontcart-progress-title-fir mt-5">社區歷史</h3>
         </div>
       </div>
       <div class="mt-5 pb-5">

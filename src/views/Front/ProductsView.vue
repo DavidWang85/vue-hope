@@ -83,7 +83,7 @@
           <div class="row row-cols-1 row-cols-md-2">
             <div class="col" v-for="product in products" :key="product.id">
               <div
-                class="card rounded shadow border-light border-0 mb-4 position-relative position-relative"
+                class="card bg-light rounded shadow border-light border-0 mb-4 position-relative position-relative"
               >
                 <router-link
                   class="card-link text-dark text-decoration-none"
@@ -103,8 +103,8 @@
                       查看更多
                     </div>
                   </div>
-                  <div class="card-body p-0">
-                    <div class="mt-3">
+                  <div class="card-body">
+                    <div>
                       <h4 class="card-title">
                         {{ product.title }}
                         <span v-if="collect.includes(product.id)"
@@ -127,7 +127,7 @@
                     </div>
                   </div>
                 </router-link>
-                <div class="d-flex justify-content-between">
+                <div class="card-body d-flex justify-content-between">
                   <button
                     class="btn btn-outline-success px-lg-4 m-0"
                     @click="toggleCollect(product.id, product.title)"
@@ -139,6 +139,7 @@
                     @click="addToCart(product.id, product.title)"
                     class="btn btn-primary px-lg-4 m-0"
                     type="button"
+                    :disabled="isLoading === product.id"
                   >
                     加入購物車
                   </button>
@@ -229,6 +230,7 @@ export default {
         product_id: id,
         qty,
       };
+      this.isLoading = id;
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
       this.$http.post(url, { data }).then((res) => {
         console.log("購物車", res);

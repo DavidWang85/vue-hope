@@ -1,7 +1,6 @@
 .fullbanner {
     height: 100vh;
     z-index: -1;
-
     &-img {
         // filter: brightness(80%);
         width: 100%;
@@ -10,36 +9,51 @@
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
-
         &-community {
-            background-image: url("https://images.unsplash.com/photo-1505843795480-5cfb3c03f6ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2066&q=80");
+            background-image: url("https://images.unsplash.com/photo-1517267667008-3b8018f4b4f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+            filter: brightness(55%);
         }
 
         &-mansion {
-            background-image: url("https://images.unsplash.com/photo-1505843513577-22bb7d21e455?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80");
+            background-image: url("https://images.unsplash.com/photo-1422015347944-9dd46d16bd0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+            filter: brightness(60%);
         }
 
         &-park {
-            background-image: url("https://images.unsplash.com/photo-1610295186968-7ad29a75199e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80");
+            background-image: url("https://images.unsplash.com/photo-1542803293-cde7da05c348?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1792&q=80");
+            filter: brightness(65%);
         }
+    }
+    @include mb {
+        height: 80vh;
     }
 }
 .front-title {
     font-size: 48px;
-    background: rgba(0, 0, 0, 0.584);
-    padding: 12px 40px 12px 40px;
+    // background: rgba(0, 0, 0, 0.304);
+    background: rgba(255, 255, 255, 0.519);
+    padding: 12px 70px 12px 70px;
     z-index: 20;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffff;
     @include pd {
-            font-size: 36px;
+        font-size: 36px;
+        padding: 12px 50px 12px 50px;
+    }
+    @include mb{
+            padding: 12px 16px 12px 16px;
+    }
+    .title-head{
+        color: $primary;
     }
     .front-title-subtitle{
+        color: $primary;
         font-size: 24px;
         @include pd{
             font-size: 16px;
+            margin-bottom: 32px;
         }
     }
     
@@ -55,10 +69,14 @@
 
 .idea-bg-space {
     background-image: url('https://media.istockphoto.com/photos/excited-senior-africanamerican-woman-with-friends-outdoors-picture-id1332740608?k=20&m=1332740608&s=612x612&w=0&h=R5PfnIe5LFTpbAOlOTe3XVv_1Y_xDZoc-NNqL2o8gak=');
+    background-position: center center;
+    background-size: cover;
 }
 
 .idea-bg-takecare {
     background-image: url('https://media.istockphoto.com/photos/getting-outside-was-a-lovely-suggestion-picture-id1165981605?k=20&m=1165981605&s=612x612&w=0&h=C4JVyl9ehT53E7q5sXC5jm1tYnwYtwx1aJ4Qn3yNIPg=');
+    background-position: center center;
+    background-size: cover;
 }
 .pic{
     .pic-link-img{
@@ -75,4 +93,35 @@
 .pic-link:hover .pic-link-img img{
     transform: scale(1.2, 1.2);
     filter: brightness(0.9);
+}
+.toabout {
+    max-width: 100%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1558882374-8545ff1f13a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+    // filter: opacity(0.2);
+    background-position: right;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -1;
+    .toabout-content{
+        z-index: 1;
+    }
+}
+.discount{
+    max-width: 100%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1568795763694-85bc272fd6f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80");
+    // filter: opacity(0.2);
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -1;
+    margin-bottom: -80px;
+    .discount-content{
+        width: 100%;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.372);
+    }
 }

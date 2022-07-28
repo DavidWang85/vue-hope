@@ -30,33 +30,30 @@
         <!-- 收藏列表 -->
         <table class="table align-middle">
           <thead>
-            <tr>
-              <th>圖片</th>
-              <th>商品名稱</th>
-              <th>價格</th>
-              <th></th>
-              <th></th>
+            <tr class="row">
+              <th class="col-2 d-none d-md-block">圖片</th>
+              <th class="col-2">名稱</th>
+              <th class="col-2">價格</th>
+              <th class="col-3"></th>
+              <th class="col-3"></th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="item in collectsList" :key="item.id">
-              <td style="width: 200px">
+            <tr class="row" v-for="item in collectsList" :key="item.id">
+              <td class="col-2 d-none d-md-block">
                 <div
-                  style="
-                    height: 100px;
-                    background-size: cover;
-                    background-position: center;
-                  "
+                  class="collect-img"
+                  style="background-size: cover; background-position: center"
                   :style="{ backgroundImage: `url(${item.imageUrl})` }"
                 ></div>
               </td>
-              <td>
+              <td class="col-2">
                 <div>{{ item.title }}</div>
               </td>
-              <td>
+              <td class="col-2">
                 <div>NT{{ item.price }} / {{ item.unit }}</div>
               </td>
-              <td>
+              <td class="col-3">
                 <button
                   @click="addToCart(item.id, item.title)"
                   class="btn btn-primary px-lg-2 m-0"
@@ -65,7 +62,7 @@
                   加入購物車
                 </button>
               </td>
-              <td>
+              <td class="col-3">
                 <button
                   class="btn btn-outline-success px-lg-2 m-0"
                   @click="removeCollect(item.id, item.title)"

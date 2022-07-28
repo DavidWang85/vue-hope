@@ -72,6 +72,7 @@ export default {
       this.$http.get(url).then((res) => {
         console.log("getCart", res);
         this.cartData = res.data.data;
+        console.log(this.cartData.carts.length);
       });
     },
   },

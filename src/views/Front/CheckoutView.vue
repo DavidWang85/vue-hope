@@ -44,7 +44,7 @@
       <div class="row mb-4">
         <div class="col-lg-6 col-md-12">
           <h5 class="text-center text-primary">訂單詳情</h5>
-          <table class="table align-middle">
+          <table data-toggle="table" class="table align-middle">
             <thead>
               <tr>
                 <th scope="col">服務項目</th>

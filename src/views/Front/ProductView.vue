@@ -16,7 +16,7 @@
     <h2 class="pages-banner-title">服務內容詳情</h2>
   </div>
   <div class="container pages-top">
-    <div class="row d-flex pb-4 align-items-center">
+    <div class="row d-flex pb-4 align-items-center justify-content-center">
       <div class="col-lg-6 col-12">
         <img class="img-cover w-100" :src="product.imageUrl" alt="" />
       </div>
@@ -55,9 +55,7 @@
               }}</span>
             </div>
           </div>
-          <div
-            class="col-md-12 col-lg-6 mt-4 mt-lg-0 d-flex justify-content-between"
-          >
+          <div class="col-md-12 col-lg-6 mt-4 mt-lg-0 d-flex">
             <button
               @click="addToCart(product.id, product.title, product.qty)"
               class="btn btn-primary px-lg-4 me-2"
@@ -74,7 +72,7 @@
             </button>
             <button
               @click="toggleCollect(product.id, product.title)"
-              class="btn btn-outline-success px-lg-3 m-0"
+              class="btn btn-outline-primary px-lg-3 m-0"
               type="btn"
             >
               <i class="bi bi-chat-square-heart"></i>先收藏
@@ -124,12 +122,7 @@
               v-for="(img, index) in product.imagesUrl"
               :key="index"
             >
-              <img
-                :src="img"
-                class="img-fluid mt-4 d-block"
-                alt=""
-                style="height: 200px"
-              />
+              <img :src="img" class="img-fluid mt-4 d-block" alt="" />
             </div>
           </div>
         </div>
@@ -165,6 +158,7 @@ export default {
       this.$http.get(url).then((res) => {
         console.log(res);
         this.product = res.data.product;
+        this.product.qty = 1;
         this.getCart();
         this.isLoading = false;
       });
