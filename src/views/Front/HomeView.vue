@@ -1,8 +1,12 @@
 <template>
   <div class="front-banner relative">
     <div class="absolute front-title text-center rounded">
-      <p class="title-head">創造最美長照社區</p>
-      <p class="front-title-subtitle">期許在這裡 你我都找到新的希望</p>
+      <p class="title-head" data-aos="fade-up" data-aos-once="true">
+        創造最美長照社區
+      </p>
+      <p class="front-title-subtitle" data-aos="fade-up" data-aos-once="true">
+        期許在這裡 你我都找到新的希望
+      </p>
       <router-link
         class="btn btn-sm-lg btn-secondary animate__animated animate__bounce animate__infinite animate__slow"
         to="/products"
@@ -28,10 +32,10 @@
     </Swiper>
   </div>
   <div class="container py-7">
-    <h2 class="text-primary text-center text-stress fw-bold">核心理念</h2>
-    <div
-      class="row flex-md-row-reverse flex-column mt-5 animate__animated animate__fadeInLeft"
-    >
+    <h2 class="text-primary text-center text-stress fw-bold" data-aos="fade-up">
+      核心理念
+    </h2>
+    <div class="row flex-md-row-reverse flex-column mt-5" data-aos="fade-up">
       <div class="col-md-6">
         <div class="img-fluid rounded idea-bg idea-bg-space"></div>
       </div>
@@ -48,9 +52,7 @@
         </h5>
       </div>
     </div>
-    <div
-      class="row flex-md-row flex-column mt-5 animate__animated animate__fadeInRight"
-    >
+    <div class="row flex-md-row flex-column mt-5" data-aos="fade-up">
       <div class="col-md-6">
         <div class="img-fluid rounded idea-bg idea-bg-takecare"></div>
       </div>
@@ -69,7 +71,10 @@
   <div class="bg-light">
     <div class="container py-7 toabout">
       <div class="row justify-content-center">
-        <div class="col-md-4 text-center py-7 toabout-content">
+        <div
+          class="col-md-4 text-center py-7 toabout-content"
+          data-aos="fade-right"
+        >
           <p class="h5 text-dark">不再讓年紀成為你熱情生活的阻力</p>
           <router-link
             type="button"
@@ -85,7 +90,7 @@
   <div class="bg-light">
     <div class="container py-7">
       <div class="row justify-content-center">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center" data-aos="fade-up">
           <h2 class="text-primary text-stress fw-bold">服務總覽</h2>
           <h5 class="font-weight-normal text-center lh-base text-muted">
             因應不同家庭、經濟狀況
@@ -102,13 +107,15 @@
             前往了解
           </router-link>
         </div>
-        <ul class="row row-cols-1 row-cols-md-2 mt-5 uli-reset px-0">
+        <ul
+          class="row row-cols-1 row-cols-md-2 mt-5 gx-0 gx-lg-4 uli-reset px-0"
+        >
           <li class="col mb-4 uli-reset">
             <div
               class="card text-center border-light shadow"
               style="position-relative position-relative"
             >
-              <div class="pic">
+              <div class="pic" data-aos="fade-right">
                 <router-link
                   class="pic-link"
                   :to="{ path: '/products', query: { category: '一般房型' } }"
@@ -135,7 +142,7 @@
               class="card text-center border-light shadow"
               style="position-relative position-relative"
             >
-              <div class="pic">
+              <div class="pic" data-aos="fade-left">
                 <router-link
                   class="pic-link"
                   :to="{ path: '/products', query: { category: '護理房型' } }"
@@ -160,7 +167,7 @@
               class="card text-center border-light shadow"
               style="position-relative position-relative"
             >
-              <div class="pic">
+              <div class="pic" data-aos="fade-right">
                 <router-link
                   class="pic-link"
                   :to="{ path: '/products', query: { category: '日照' } }"
@@ -187,7 +194,7 @@
               class="card text-center border-light shadow"
               style="position-relative position-relative"
             >
-              <div class="pic">
+              <div class="pic" data-aos="fade-left">
                 <router-link
                   class="pic-link"
                   :to="{ path: '/products', query: { category: '家訪' } }"
@@ -215,8 +222,8 @@
   </div>
   <div class="py-7 discount">
     <div class="container py-4">
-      <div class="row justify-content-center">
-        <div class="col-md-4 text-center discount-content">
+      <div class="row justify-content-center gx-0">
+        <div class="col-md-4 text-center discount-content" data-aos="fade-up">
           <h2 class="text-primary text-stress fw-bold">獲取優惠折扣</h2>
           <div class="input-group my-3 d-flex justify-content-center">
             <v-form ref="form" v-slot="{ errors }">

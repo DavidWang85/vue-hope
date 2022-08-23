@@ -12,6 +12,8 @@
 import FrontNavbar from "@/components/FrontNavbar.vue";
 import FrontFooter from "@/components/FrontFooter.vue";
 import ClickToTop from "@/components/ClickToTop.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default {
   methods: {
@@ -41,10 +43,13 @@ export default {
   },
   mounted() {
     // 要用網頁時再開啟
-    const chatbox = document.getElementById("fb-customer-chat");
-    chatbox.setAttribute("page_id", `${process.env.VUE_APP_FB_ID}`);
-    chatbox.setAttribute("attribution", "biz_inbox");
-    this.init();
+    // const chatbox = document.getElementById("fb-customer-chat");
+    // chatbox.setAttribute("page_id", `${process.env.VUE_APP_FB_ID}`);
+    // chatbox.setAttribute("attribution", "biz_inbox");
+    // this.init();
+    AOS.init({
+      duration: 500,
+    });
   },
 };
 </script>
