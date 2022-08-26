@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_test"]=self["webpackChunkvue_test"]||[]).push([[88],{8088:function(t,n,u){u.r(n),u.d(n,{default:function(){return i}});var e=u(6252);const r=(0,e._)("h1",null,"404 NOT FOUND",-1),l=(0,e._)("p",null,"此頁面不存在喔～",-1),s=(0,e._)("button",{type:"button",class:"btn btn-primary"},"回到首頁",-1);function c(t,n){const u=(0,e.up)("router-link");return(0,e.wg)(),(0,e.iD)(e.HY,null,[r,l,(0,e.Wm)(u,{to:"/"},{default:(0,e.w5)((()=>[s])),_:1})],64)}var o=u(3744);const a={},f=(0,o.Z)(a,[["render",c]]);var i=f}}]);
+//# sourceMappingURL=88.f1d159b1.js.map
