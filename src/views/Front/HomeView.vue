@@ -108,14 +108,14 @@
           </router-link>
         </div>
         <ul
-          class="row row-cols-1 row-cols-md-2 mt-5 gx-0 gx-lg-4 uli-reset px-0"
+          class="row row-cols-1 row-cols-md-2 mt-5 gx-3 gx-lg-4 uli-reset px-1 px-lg-0"
         >
-          <li class="col mb-4 uli-reset">
+          <li class="col mb-4 uli-reset" data-aos="fade-right">
             <div
               class="card text-center border-light shadow"
               style="position-relative position-relative"
             >
-              <div class="pic" data-aos="fade-right">
+              <div class="pic">
                 <router-link
                   class="pic-link"
                   :to="{ path: '/products', query: { category: '一般房型' } }"
@@ -137,12 +137,12 @@
               </div>
             </div>
           </li>
-          <li class="col mb-4 uli-reset">
+          <li class="col mb-4 uli-reset" data-aos="fade-left">
             <div
               class="card text-center border-light shadow"
               style="position-relative position-relative"
             >
-              <div class="pic" data-aos="fade-left">
+              <div class="pic">
                 <router-link
                   class="pic-link"
                   :to="{ path: '/products', query: { category: '護理房型' } }"
@@ -162,12 +162,12 @@
               </div>
             </div>
           </li>
-          <li class="col mb-4 uli-reset">
+          <li class="col mb-4 uli-reset" data-aos="fade-right">
             <div
               class="card text-center border-light shadow"
               style="position-relative position-relative"
             >
-              <div class="pic" data-aos="fade-right">
+              <div class="pic">
                 <router-link
                   class="pic-link"
                   :to="{ path: '/products', query: { category: '日照' } }"
@@ -189,12 +189,12 @@
               </div>
             </div>
           </li>
-          <li class="col mb-4 uli-reset">
+          <li class="col mb-4 uli-reset" data-aos="fade-left">
             <div
               class="card text-center border-light shadow"
               style="position-relative position-relative"
             >
-              <div class="pic" data-aos="fade-left">
+              <div class="pic">
                 <router-link
                   class="pic-link"
                   :to="{ path: '/products', query: { category: '家訪' } }"
