@@ -80,10 +80,10 @@
           </ul>
         </div>
         <div class="col-9">
-          <div class="row row-cols-1 row-cols-md-2">
+          <div class="row row-cols-1 row-cols-md-2 g-2">
             <div class="col" v-for="product in products" :key="product.id">
               <div
-                class="card bg-light rounded shadow border-light border-0 mb-4 position-relative position-relative"
+                class="card bg-light rounded shadow border-light border-0 mb-2 position-relative position-relative"
               >
                 <router-link
                   class="card-link text-dark text-decoration-none"
